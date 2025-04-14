@@ -1,4 +1,8 @@
 /* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
@@ -59,6 +63,21 @@ body.dark-mode a {
 .navbar .navbar-brand {
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+/* Dark Mode Toggle Button (Cute Style) */
+#dark-mode-toggle {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 20px;
+  background-color: #d63384;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+#dark-mode-toggle:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff3366, #ff66a3);
 }
 
 /* Hamburger Menu (Mobile) */
