@@ -7,10 +7,25 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Dark Mode */
+/* Dark Mode Styles */
 body.dark-mode {
   background-color: #121212;
   color: #eee;
+}
+
+body.dark-mode .navbar {
+  background-color: #333;
+  box-shadow: 0 2px 5px rgba(255,255,255,0.1);
+}
+
+body.dark-mode .project-card,
+body.dark-mode form,
+body.dark-mode .navbar-links {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode a {
+  color: #ff4081;
 }
 
 /* Navbar */
@@ -31,12 +46,14 @@ body.dark-mode {
   text-decoration: none;
   color: #c2186a;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: color 0.3s, background-color 0.3s;
 }
 
 .navbar a:hover,
 .navbar a.active {
   color: #a4166c;
+  background-color: rgba(194, 24, 106, 0.1);
+  border-radius: 4px;
 }
 
 .navbar .navbar-brand {
@@ -136,8 +153,14 @@ form button {
   background-color: #d63384;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+form button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff3366, #ff66a3);
 }
 
 /* Footer */
