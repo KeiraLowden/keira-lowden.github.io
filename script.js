@@ -3,6 +3,7 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 if (darkModeToggle) {
   darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
+    // Update button text accordingly
     darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
   });
 }
@@ -16,25 +17,5 @@ if (mobileMenu) {
   });
 }
 
-// Scroll-linked Navigation Highlight (optional enhancement)
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('.section');
-  const navLinks = document.querySelectorAll('.navbar-links a');
-  let current = '';
-
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (window.pageYOffset >= sectionTop) {
-      current = section.getAttribute('id');
-    }
-  });
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href').includes(current)) {
-      link.classList.add('active');
-    }
-  });
-});
-
-console.log("Website loaded. Dark mode, mobile menu, and nav highlighting are active.");
+// Optional: You can add additional JS for smooth transitions or nav highlighting here
+console.log("Website loaded. Dark mode and mobile menu are active.");
