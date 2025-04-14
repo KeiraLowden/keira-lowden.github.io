@@ -2,73 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Keira Lowden</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home - Keira Lowden</title>
   <link rel="stylesheet" href="styles.css" />
-  <script defer src="script.js"></script>
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
   <nav class="navbar">
     <div class="navbar-brand">Keira Lowden</div>
+    <!-- Hamburger menu for mobile -->
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
     <ul class="navbar-links">
-      <li><a href="#bio">Bio</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="bio.html" target="_blank">Bio</a></li>
+      <li><a href="projects.html" target="_blank">Projects</a></li>
+      <li><a href="blog.html" target="_blank">Blog</a></li>
+      <li><a href="schedule.html" target="_blank">Schedule</a></li>
+      <li><button id="dark-mode-toggle">Dark Mode</button></li>
     </ul>
   </nav>
-
-  <section id="bio" class="section">
-    <h2>About Me</h2>
-    <p>I’m Keira Lowden, a CS + Psychology major at Northeastern with a minor in Economics. My work blends tech, media, and human factors to build meaningful, creative, and socially impactful experiences.</p>
-    <ul>
-      <li><strong>Education:</strong> Northeastern University (2027), B.S. in CS & Psychology, Minor in Economics</li>
-      <li><strong>Internships:</strong> BLACKBIRD.AI (AI Threat Intel), HUMAN Security (IT/Marketing)</li>
-      <li><strong>Teaching:</strong> TA for Cybersecurity & CS Fundamentals</li>
-      <li><strong>Clubs:</strong> Seoul Source (K-pop/media), NJ Youth Symphony, Scouts BSA (Eagle Scout)</li>
-      <li><strong>Skills:</strong> HTML, CSS, JavaScript, Python, Java, Kotlin, Figma, HubSpot</li>
-    </ul>
-  </section>
-
-  <section id="projects" class="section">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <a href="blog1.html" target="_blank">
-          <img src="https://via.placeholder.com/100" alt="Compass AI Blog" />
-          <p>Empowering Gen Z with Compass by BLACKBIRD.AI</p>
-        </a>
-      </div>
-      <div class="project-card"><img src="https://via.placeholder.com/100" /><p>Campus Connect – Peer-to-peer community app</p></div>
-      <div class="project-card"><img src="https://via.placeholder.com/100" /><p>K-pop Blog – Media & fandom storytelling</p></div>
-      <div class="project-card"><img src="https://via.placeholder.com/100" /><p>Memory & UX – Designing for cognitive load</p></div>
-      <div class="project-card"><img src="https://via.placeholder.com/100" /><p>Belongingness Prototype – Inclusive UI design</p></div>
-      <div class="project-card"><img src="https://via.placeholder.com/100" /><p>Visual Algorithms – Teaching graph theory visually</p></div>
-    </div>
-  </section>
-
-  <section id="blog" class="section">
-    <h2>Latest Blog</h2>
-    <p><a href="blog1.html" target="_blank">K-pop & Narrative Attacks – Read on BLACKBIRD.AI</a></p>
-  </section>
-
-  <section id="schedule" class="section">
-    <h2>Schedule a Meeting</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
-      <label for="date">Preferred Date:</label>
-      <input type="date" id="date" name="date" required />
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-      <button type="submit">Submit</button>
-    </form>
-  </section>
-
+  <main class="section">
+    <header>
+      <img src="https://via.placeholder.com/1200x300?text=Keira+Lowden" alt="Header Image" class="header-img">
+    </header>
+    <h1>Welcome to Keira Lowden’s Website</h1>
+    <p>Discover my work in technology, media, design, and community.</p>
+  </main>
   <footer>
-    <p>Keira Lowden</p>
+    <p>&copy; 2025 Keira Lowden | <a href="https://www.linkedin.com/in/keira-lowden/" target="_blank">LinkedIn</a></p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
