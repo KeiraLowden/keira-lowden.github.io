@@ -17,5 +17,21 @@ if (mobileMenu) {
   });
 }
 
-// Optional: You can add additional JS for smooth transitions or nav highlighting here
-console.log("Website loaded. Dark mode and mobile menu are active.");
+// Fade-in sections on scroll
+document.querySelectorAll('section').forEach(section => {
+  section.classList.add('hidden-section');
+});
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible-section');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(section => {
+  observer.observe(section);
+});
+
+console.log("Single-page site loaded. Footer fixed, fade-in animation, and dark/light mode toggles are active.");
