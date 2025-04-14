@@ -16,19 +16,19 @@ if (mobileMenu) {
   });
 }
 
-// Optional: Scroll-linked Nav Highlighting
+// Scroll-linked Navigation Highlight (optional enhancement)
 window.addEventListener('scroll', () => {
   const sections = document.querySelectorAll('.section');
   const navLinks = document.querySelectorAll('.navbar-links a');
   let current = '';
-  
+
   sections.forEach(section => {
     const sectionTop = section.offsetTop - 100;
     if (window.pageYOffset >= sectionTop) {
       current = section.getAttribute('id');
     }
   });
-  
+
   navLinks.forEach(link => {
     link.classList.remove('active');
     if (link.getAttribute('href').includes(current)) {
@@ -37,4 +37,4 @@ window.addEventListener('scroll', () => {
   });
 });
 
-console.log("Website loaded. Dark mode, mobile menu, and nav highlighting are active.");
+console.log("Website loaded. Dark mode, mobile menu, and enhanced nav interactivity are active.");
