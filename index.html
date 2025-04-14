@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Keira Lowden</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <h1>Keira Lowden</h1>
+    <ul>
+      <li><a href="#bio">Bio</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#schedule">Schedule</a></li>
+    </ul>
+  </nav>
+
+  <section id="bio" class="section">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm Keira Lowden — a creative technologist passionate about the intersection of technology, arts, and storytelling. I bring a unique blend of computer science, UX design, and artistic expression to everything I create.
+    </p>
+  </section>
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100" alt="Project 1 icon" />
+        <p>Campus Connect – A mobile app to strengthen peer-to-peer connection across university campuses.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100" alt="Project 2 icon" />
+        <p>K-Pop Blog – A personal blog that combines fandom and media analysis with digital storytelling.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100" alt="Project 3 icon" />
+        <p>Memory & UX – A study of memory-based impairments in digital interactions, inspired by *Finding Dory*.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100" alt="Project 4 icon" />
+        <p>Disinformation Dashboard – A tool using Compass by BLACKBIRD.AI to track online misinformation patterns.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100" alt="Project 5 icon" />
+        <p>Belongingness Prototype – A high-fidelity design aimed at increasing inclusivity in online spaces.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/100" alt="Project 6 icon" />
+        <p>Visual Algorithms – An artistic visualization of graph algorithms used in computer science education.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" class="section">
+    <h2>Schedule a Meeting</h2>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="date">Preferred Date:</label>
+      <input type="date" id="date" name="date" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Keira Lowden</p>
+  </footer>
+</body>
+</html>
