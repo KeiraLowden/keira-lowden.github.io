@@ -37,4 +37,4 @@ window.addEventListener('scroll', () => {
   });
 });
 
-console.log("Website loaded. Dark mode, mobile menu, and enhanced nav interactivity are active.");
+console.log("Website loaded. Dark mode, mobile menu, and nav highlighting are active.");
