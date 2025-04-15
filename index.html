@@ -3,119 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Keira Lowden - Single Page</title>
+  <title>Keira Lowden - Home</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/png" href="favicon.png" />
-  <!-- Smooth scrolling -->
-  <style>html { scroll-behavior: smooth; }</style>
 </head>
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="navbar-brand">Keira Lowden</div>
-    <!-- Hamburger icon for mobile -->
     <div class="menu-toggle" id="mobile-menu">
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </div>
     <ul class="navbar-links">
-      <li><a href="#home" class="nav-link">Home</a></li>
-      <li><a href="#bio" class="nav-link">Bio</a></li>
-      <li><a href="#projects" class="nav-link">Projects</a></li>
-      <li><a href="#blog" class="nav-link">Blog</a></li>
-      <li><a href="#schedule" class="nav-link">Schedule</a></li>
+      <li><a href="index.html" class="nav-link active">Home</a></li>
+      <li><a href="bio.html" class="nav-link">Bio</a></li>
+      <li><a href="projects.html" class="nav-link">Projects</a></li>
+      <li><a href="blog.html" class="nav-link">Blog</a></li>
+      <li><a href="schedule.html" class="nav-link">Schedule</a></li>
       <li>
         <button id="dark-mode-toggle">Dark Mode</button>
       </li>
     </ul>
   </nav>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Home Section -->
-    <section id="home" class="section">
-      <header>
-        <img src="Lowden, Keira - FORT.pdf" alt="Header Image" class="header-img">
-      </header>
+  <!-- Hero Section -->
+  <header class="hero">
+    <!-- Replace this with your actual hero image file path -->
+    <img src="https://via.placeholder.com/1600x600?text=Keira+Lowden" alt="Hero Image" class="hero-img">
+    <div class="hero-overlay">
       <h1>Keira Lowden</h1>
       <p>Discover my work in technology, media, design, and community.</p>
-    </section>
-    
-    <!-- Bio Section -->
-    <section id="bio" class="section">
-      <h2>About Me</h2>
-      <p>
-        I'm Keira Lowden — a Computer Science and Psychology major at Northeastern University (Minor in Economics). I blend technology, media, and community to create meaningful experiences. I've interned with BLACKBIRD.AI and HUMAN Security and served as a Teaching Assistant in Cybersecurity and CS Fundamentals.
-      </p>
-      <p>
-        Outside tech, I co-founded the K-pop club Seoul Source, perform as a flutist, and proudly earned Eagle Scout honors.
-      </p>
-      <ul>
-        <li><strong>Education:</strong> B.S. in Computer Science &amp; Psychology, Minor in Economics (Northeastern, 2027)</li>
-        <li><strong>Experience:</strong> BLACKBIRD.AI (AI Threat Intelligence), HUMAN Security (IT/Marketing), TA roles</li>
-        <li><strong>Activities:</strong> Seoul Source, NJ Youth Symphony, Scouts BSA (Eagle Scout)</li>
-        <li><strong>Skills:</strong> HTML, CSS, JavaScript, Python, Java, Kotlin, Figma, HubSpot</li>
-      </ul>
-    </section>
-    
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="https://via.placeholder.com/100" alt="Campus Connect">
-          <p>Exploring the Relationship Between K-pop Lyrics and Song Popularity</p>
-        </div>
-        <div class="project-card">
-          <img src="https://blackbird.ai/blog/kpop-and-precision-canceling-how-narrative-attacks-shape-fan-perception/" alt="K-pop Blog">
-          <p>K-pop and Precision Canceling: How Narrative Attacks Shape Fan Perception</p>
-        </div>
-        <div class="project-card">
-          <img src="https://blackbird.ai/blog/microsoft-unveils-ai-cybersecurity-strategies-at-black-hat-2024/" alt="Compass AI Dashboard">
-          <p>Microsoft Unveils AI Cybersecurity Strategies at Black Hat 2024</p>
-        </div>
-        <div class="project-card">
-          <img src="https://blackbird.ai/blog/deepfakes-disinformation-bots-uk-general-election/" alt="Compass AI Dashboard">
-          <p>Deepfakes, Disinformation, and a Network of Bots Work to Influence Voters Ahead of the UK General Election</p>
-        </div>
-        <div class="project-card">
-          <img src="https://blackbird.ai/blog/gen-z-compass-blackbird-ai-battles-misinformation-and-disinformation/" alt="Compass AI Dashboard">
-          <p>Empowering Gen Z: How Compass by Blackbird.AI Battles Misinformation and Disinformation by Leveraging AI</p>
-        </div>
-        <div class="project-card">
-          <img src="https://blackbird.ai/blog/ai-american-marketing-association-hall-of-fame-panel/" alt="Compass AI Dashboard">
-          <p>Key Takeaways From Artificial Intelligence Panel At American Marketing Association’s Marketing Hall of Fame</p>
-        </div>
-      </div>
-    </section>
-  
-    
-    <!-- Schedule Section -->
-    <section id="schedule" class="section">
-      <h2>Schedule a Meeting</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        
-        <label for="date">Preferred Date:</label>
-        <input type="date" id="date" name="date" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-        
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </main>
-  
+      <a href="bio.html" class="cta-button">Learn More</a>
+    </div>
+  </header>
+
   <!-- Footer -->
   <footer>
     <p>Keira Lowden | <a href="https://www.linkedin.com/in/keira-lowden/">LinkedIn</a></p>
-    <p><a href="#home" class="back-to-top">Back to Top</a></p>
+    <p><a href="index.html" class="back-to-home">Back to Home</a></p>
   </footer>
   
   <script src="script.js"></script>
