@@ -125,6 +125,7 @@ body.dark-mode footer {
 
 /* Hero Section (Home Page) */
 .hero {
+  margin-top: 80px;
   position: relative;
   overflow: hidden;
 }
