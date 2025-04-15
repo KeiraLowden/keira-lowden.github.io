@@ -3,7 +3,6 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 if (darkModeToggle) {
   darkModeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
-    // Update button text accordingly
     darkModeToggle.textContent = document.body.classList.contains('dark-mode') ? 'Light Mode' : 'Dark Mode';
   });
 }
@@ -17,11 +16,10 @@ if (mobileMenu) {
   });
 }
 
-// Fade-in sections on scroll
+// Fade-In Sections on Scroll
 document.querySelectorAll('section').forEach(section => {
   section.classList.add('hidden-section');
 });
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -29,9 +27,17 @@ const observer = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('section').forEach(section => {
   observer.observe(section);
 });
 
-console.log("Single-page site loaded. Footer fixed, fade-in animation, and dark/light mode toggles are active.");
+// "Back to Home" Link in Footer
+const backToHomeLink = document.querySelector('.back-to-home');
+if (backToHomeLink) {
+  backToHomeLink.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.location.href = "index.html";
+  });
+}
+
+console.log("Multi-page site loaded. Dark mode, mobile menu, fade-in animations, and footer enhancements are active.");
