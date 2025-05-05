@@ -125,35 +125,30 @@ body.dark-mode footer {
 
 /* Hero Section (Home Page) */
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* let content dictate height, add vertical padding */
-  padding: 4rem 1rem;
-  background-color: #fafafa; /* or whatever */
-}
-
-.hero-img {
-  width: 60px;        /* shrink it down */
-  height: 60px;       /* keep it square */
-  border-radius: 50%; /* circle */
-  object-fit: cover;
-  margin-bottom: 1rem;
-  /* box-shadow, etc. */
-}
-
-.hero-text {
+  padding: 3rem 1rem;
   text-align: center;
+  background-color: #fafafa; /* or whatever bg you like */
 }
 
-.hero-text h1 {
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-}
-
-.hero-text p {
+/* 2) Small circular avatar */
+.hero-avatar {
+  width: 80px;         /* tweak as needed */
+  height: 80px;        /* keep equal to width */
+  border-radius: 50%;  /* perfect circle */
+  object-fit: cover;   /* fill the frame without distortion */
   margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: inline-block;
+}
+
+/* 3) Your text and button styling */
+.hero-content h1 {
+  margin: 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.hero-content p {
+  margin: 0.5rem 0 1rem;
   color: #555;
 }
 .cta-button {
