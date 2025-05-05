@@ -15,10 +15,14 @@ main.section {
   flex: 1; /* grow to push footer down */
 }
 
-/* Smooth Scrolling */
-html {
-  scroll-behavior: smooth;
+/* 2) Section padding so content never hugs the viewport */
+.section {
+  padding: 2rem;         /* 2rem on all sides */
+  box-sizing: border-box;
 }
+
+/* Smooth Scrolling */
+html { scroll-behavior: smooth; }
 
 /* Fade-In Animation */
 .hidden-section {
@@ -51,24 +55,6 @@ body.dark-mode a {
 body.dark-mode footer {
   background: linear-gradient(45deg, #333, #444);
   color: #eee;
-}
-
-/* Dark-mode hero override */
-body.dark-mode .hero {
-  background-color: #1e1e1e;
-}
-body.dark-mode .hero h1,
-body.dark-mode .hero p {
-  color: #eee;
-}
-
-/* Dark-mode “Learn More” button override */
-body.dark-mode .cta-button {
-  background-color: #8e44ad;  /* deep purple */
-  color: #fff;
-}
-body.dark-mode .cta-button:hover {
-  background: #9b59b6;         /* slightly lighter purple */
 }
 
 /* Navigation Bar */
@@ -139,7 +125,7 @@ body.dark-mode .cta-button:hover {
 
 /* Hero Section */
 .hero {
-  flex: 1; /* fill remaining space so content can center vertically */
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -161,6 +147,21 @@ body.dark-mode .cta-button:hover {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+/* Dark-mode hero override */
+body.dark-mode .hero {
+  background-color: #1e1e1e;
+}
+body.dark-mode .hero h1,
+body.dark-mode .hero p {
+  color: #eee;
+}
+body.dark-mode .cta-button {
+  background-color: #ff66a3;
+}
+body.dark-mode .cta-button:hover {
+  background: linear-gradient(45deg, #ff3366, #ff66a3);
+}
+
 /* “Learn More” button */
 .cta-button {
   display: inline-block;
@@ -179,6 +180,8 @@ body.dark-mode .cta-button:hover {
 
 /* Projects & Blog Grid */
 .projects-grid {
+  margin: 0 auto;               /* center the grid */
+  max-width: 1200px;            /* cap its width */
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
@@ -259,6 +262,22 @@ form button {
   border-radius: 8px;
   font-family: inherit;
 }
+
+/* Dark-mode schedule form */
+body.dark-mode form {
+  background-color: #1e1e1e;
+}
+body.dark-mode form label {
+  color: #eee;
+}
+body.dark-mode form input,
+body.dark-mode form textarea {
+  background-color: #333;
+  color: #eee;
+  border: 1px solid #555;
+}
+
+/* Schedule submit button */
 form button {
   border: none;
   background: #d63384;
@@ -273,7 +292,7 @@ form button:hover {
 
 /* Footer */
 footer {
-  margin-top: auto;  /* pushes footer to bottom on short pages */
+  margin-top: auto;  /* pushes footer to bottom if content is short */
   text-align: center;
   padding: 2rem;
   background: linear-gradient(45deg,#ffe6f0,#fff7fb);
