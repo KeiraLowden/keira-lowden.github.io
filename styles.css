@@ -125,36 +125,36 @@ body.dark-mode footer {
 
 /* Hero Section (Home Page) */
 .hero {
-  margin-top: 80px;
-  position: relative;
-  overflow: hidden;
-}
-.hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 230, 240, 0.85);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
-  padding: 1rem;
+  /* let content dictate height, add vertical padding */
+  padding: 4rem 1rem;
+  background-color: #fafafa; /* or whatever */
 }
-.hero-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-.hero-overlay p {
-  font-size: 1.2rem;
+
+.hero-img {
+  width: 150px;       /* fixed width */
+  height: 150px;      /* fixed height */
+  border-radius: 50%; /* make it a circle */
+  object-fit: cover;  /* crop to fill */
   margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero-text h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.hero-text p {
+  margin-bottom: 1rem;
+  color: #555;
 }
 .cta-button {
   background-color: #d63384;
