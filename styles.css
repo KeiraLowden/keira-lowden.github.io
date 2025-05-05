@@ -185,15 +185,24 @@ body.dark-mode footer {
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 
-/* Image: fills width, keeps correct ratio */
-.project-card img,
-.blog-card img {
+/* Projects: let each image keep its own native ratio */
+.project-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 16/9;        /* <--- use your image’s native ratio here */
+  height: auto;        /* natural height */
   object-fit: cover;
   transition: filter 0.3s ease;
 }
+
+/* Blog: still uniform 16:9 if you like, otherwise switch to height:auto as well */
+.blog-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;  /* remove this line if you want blog posts to also use height:auto */
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
 
 /* Overlay (hidden by default) */
 .project-card .overlay,
