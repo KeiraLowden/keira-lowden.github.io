@@ -119,13 +119,18 @@ body.dark-mode footer {
 
 /* Hero Section */
 .hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
   padding: 3rem 1rem;
-  text-align: center;
   background: #fafafa;
+  text-align: center; 
 }
 .hero-content {
-  display: inline-block;
   max-width: 500px;
+  width: 100%;
 }
 .hero-avatar {
   width: 120px;
