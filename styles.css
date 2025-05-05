@@ -135,12 +135,12 @@ body.dark-mode footer {
 }
 
 .hero-img {
-  width: 150px;       /* fixed width */
-  height: 150px;      /* fixed height */
-  border-radius: 50%; /* make it a circle */
-  object-fit: cover;  /* crop to fill */
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 60px;        /* shrink it down */
+  height: 60px;       /* keep it square */
+  border-radius: 50%; /* circle */
+  object-fit: cover;
+  margin-bottom: 1rem;
+  /* box-shadow, etc. */
 }
 
 .hero-text {
