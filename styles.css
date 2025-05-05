@@ -16,7 +16,9 @@ main.section {
 }
 
 /* Smooth Scrolling */
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 /* Fade-In Animation */
 .hidden-section {
@@ -29,7 +31,7 @@ html { scroll-behavior: smooth; }
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Links inherit color */
+/* Links inherit color unless otherwise styled */
 a {
   text-decoration: none;
   color: inherit;
@@ -59,11 +61,14 @@ body.dark-mode .hero h1,
 body.dark-mode .hero p {
   color: #eee;
 }
+
+/* Dark-mode “Learn More” button override */
 body.dark-mode .cta-button {
-  background-color: #ff66a3;
+  background-color: #8e44ad;  /* deep purple */
+  color: #fff;
 }
 body.dark-mode .cta-button:hover {
-  background: linear-gradient(45deg, #ff3366, #ff66a3);
+  background: #9b59b6;         /* slightly lighter purple */
 }
 
 /* Navigation Bar */
@@ -134,7 +139,7 @@ body.dark-mode .cta-button:hover {
 
 /* Hero Section */
 .hero {
-  flex: 1; /* fill remaining space */
+  flex: 1; /* fill remaining space so content can center vertically */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -222,7 +227,7 @@ body.dark-mode .cta-button:hover {
   color: #ffb6c1;
 }
 
-/* Multi-Section Card (3 horizontal slices) */
+/* Multi-Section Card (horizontal slices) */
 .card.multi .overlay {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -268,7 +273,7 @@ form button:hover {
 
 /* Footer */
 footer {
-  margin-top: auto;  /* push to very bottom */
+  margin-top: auto;  /* pushes footer to bottom on short pages */
   text-align: center;
   padding: 2rem;
   background: linear-gradient(45deg,#ffe6f0,#fff7fb);
