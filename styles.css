@@ -113,6 +113,17 @@ body.dark-mode footer {
   margin-bottom: 1.5rem;
 }
 
+.hero-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: inline-block;
+}
+
+
 /* Projects & Blog Grid */
 .projects-grid {
   display: grid;
@@ -125,8 +136,8 @@ body.dark-mode footer {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  height: 250px;                  /* fixed height */
-  background-size: cover;         /* image fills */
+  height: 250px;
+  background-size: cover;
   background-position: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
@@ -135,19 +146,15 @@ body.dark-mode footer {
   transform: scale(1.03);
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
-
-/* Overlay sits atop the card */
 .card .overlay {
   position: absolute;
-  inset: 0;                        /* shorthand for top/left/right/bottom */
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(0,0,0,0);
   transition: background-color 0.3s ease;
 }
-
-/* Title link invisible until hover */
 .card .overlay a {
   display: flex;
   align-items: center;
@@ -159,22 +166,24 @@ body.dark-mode footer {
   text-align: center;
   transition: color 0.3s ease;
 }
-
-/* On hover: darken + show title */
 .card:hover .overlay {
   background-color: rgba(0,0,0,0.6);
 }
 .card:hover .overlay a {
-  color: #ffb6c1;                 /* light-pink */
+  color: #ffb6c1;
 }
 
 /* Multi-Section Card */
 .card.multi .overlay {
   display: grid;
-  grid-template-rows: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
-.card.multi .overlay a:not(:last-child) {
-  border-bottom: 1px solid rgba(255,255,255,0.5);
+.card.multi .overlay a.section:not(:last-child) {
+  border-right: 1px solid rgba(255,255,255,0.5);
+}
+.card.multi .overlay a.section {
+  /* remove the previous bottom-border if any */
+  border-bottom: none;
 }
 
 /* Schedule Form */
@@ -216,20 +225,34 @@ form button:hover {
 footer {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(45deg,#ffe6f0,#fff7fb);
+  background: linear-gradient(45deg, #ffe6f0, #fff7fb);
 }
-footer p,
-.back-to-home {
+
+/* Space out each paragraph */
+footer p {
   margin: 0.5rem 0;
 }
-.back-to-home {
-  display: inline-block;
+
+/* Footer links (LinkedIn & Back-to-Home) */
+footer p a,
+footer .back-to-home {
   color: #c2186a;
   font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
 }
-.back-to-home:hover {
+
+footer p a:hover,
+footer .back-to-home:hover {
   color: #a4166c;
 }
+
+/* If you want a bit of extra top margin on the “Back to Home” link: */
+footer .back-to-home {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
