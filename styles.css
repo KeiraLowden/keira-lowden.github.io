@@ -250,67 +250,62 @@ body.dark-mode .contact-section {
   background: #1e1e1e;
 }
 
-.contact-card {
-  width: 100%;
-  max-width: 480px;
-  margin-top: 1.5rem;
-  background: white;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-}
-body.dark-mode .contact-card {
-  background: #2a2a2a;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+.contact-section {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 0 1rem;
 }
 
-/* Form fields more spacious */
-.contact-card form {
-  display: grid;
-  gap: 1.25rem;
+.form-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-top: 1rem;
 }
-.contact-card label {
+body.dark-mode .form-card {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+.form-card label {
+  display: block;
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #333;
+  color: inherit;
 }
-body.dark-mode .contact-card label {
-  color: #eee;
-}
-.contact-card input,
-.contact-card textarea {
+
+.form-card input,
+.form-card textarea {
   width: 100%;
   padding: 0.75rem;
+  margin-bottom: 1.5rem;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-family: inherit;
   background: #fafafa;
-  color: #333;
+  transition: background 0.3s, border-color 0.3s;
 }
-body.dark-mode .contact-card input,
-body.dark-mode .contact-card textarea {
-  background: #444;
-  border: 1px solid #555;
+body.dark-mode .form-card input,
+body.dark-mode .form-card textarea {
+  background: #2e2e2e;
+  border-color: #444;
   color: #eee;
 }
 
-/* “Send Message” button styling */
-.contact-card button {
-  margin-top: 0.5rem;
+.form-card button {
+  width: 100%;
   padding: 0.75rem;
-  border: none;
-  border-radius: 20px;
   background: #d63384;
   color: #fff;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
   cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
+  transition: background 0.3s;
 }
-.contact-card button:hover {
-  background: linear-gradient(45deg,#ff3366,#ff66a3);
-  transform: scale(1.05);
-}
-body.dark-mode .contact-card button {
-  background: #ff66a3;
+.form-card button:hover {
+  background: #ff4081;
 }
 
 
