@@ -132,8 +132,8 @@ body.dark-mode footer {
 
 /* 2) Small circular avatar */
 .hero-avatar {
-  width: 80px;         /* tweak as needed */
-  height: 80px;        /* keep equal to width */
+  width: 120px;         /* tweak as needed */
+  height: 120px;        /* keep equal to width */
   border-radius: 50%;  /* perfect circle */
   object-fit: cover;   /* fill the frame without distortion */
   margin-bottom: 1rem;
