@@ -1,3 +1,20 @@
+/* Flex layout so footer sits at viewport bottom */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #fff7fb;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Let main grow to fill space */
+main.section {
+  flex: 1;
+}
+
 /* Smooth Scrolling */
 html { scroll-behavior: smooth; }
 
@@ -12,14 +29,7 @@ html { scroll-behavior: smooth; }
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Base Styles */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #fff7fb;
-  color: #333;
-  transition: background-color 0.3s, color 0.3s;
-}
+/* Base link style */
 a {
   text-decoration: none;
   color: inherit;
@@ -32,12 +42,6 @@ body.dark-mode {
 }
 body.dark-mode .navbar {
   background-color: #333;
-}
-body.dark-mode .navbar-links,
-body.dark-mode .project-card,
-body.dark-mode .blog-card,
-body.dark-mode form {
-  background-color: #1e1e1e;
 }
 body.dark-mode a {
   color: #ff4081;
@@ -56,34 +60,23 @@ body.dark-mode footer {
   background-color: #ffe6f0;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   position: sticky;
-  top: 0;
-  z-index: 1000;
+  top: 0; z-index: 1000;
 }
 .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.5rem; font-weight: bold;
 }
 .menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
+  display: none; flex-direction: column; cursor: pointer;
 }
 .menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #c2186a;
-  margin: 3px 0;
+  width: 25px; height: 3px; background-color: #c2186a; margin: 3px 0;
 }
 .navbar-links {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
+  display: flex; gap: 1.5rem; list-style: none;
 }
 .navbar a {
-  color: #c2186a;
-  font-weight: 600;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  color: #c2186a; font-weight: 600;
+  padding: 0.25rem 0.5rem; border-radius: 4px;
   transition: background 0.3s, color 0.3s;
 }
 .navbar a:hover,
@@ -94,37 +87,46 @@ body.dark-mode footer {
 
 /* Dark Mode Toggle */
 #dark-mode-toggle {
-  border: none;
-  border-radius: 20px;
-  padding: 0.5rem 1rem;
-  background-color: #d63384;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
+  border: none; border-radius: 20px;
+  padding: 0.5rem 1rem; background-color: #d63384; color: #fff;
+  cursor: pointer; transition: transform 0.3s, background 0.3s;
 }
 #dark-mode-toggle:hover {
   transform: scale(1.05);
   background: linear-gradient(45deg,#ff3366,#ff66a3);
 }
 
+/* Hero Section */
+.hero {
+  padding: 3rem 1rem; text-align: center; background: #fafafa;
+}
+.hero-content {
+  display: inline-block; max-width: 500px;
+}
+.hero-avatar {
+  width: 120px; height: 120px; border-radius: 50%;
+  object-fit: cover; margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Learn More button */
+.cta-button {
+  display: inline-block; margin-top: 1rem;
+  background-color: #d63384; color: #fff;
+  padding: 0.75rem 1.5rem; border-radius: 20px;
+  font-weight: 600; transition: background 0.3s, transform 0.3s;
+}
+.cta-button:hover {
+  background: linear-gradient(45deg,#ff3366,#ff66a3);
+  transform: scale(1.05);
+}
+
 /* Section Titles */
 .section h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+  text-align: center; margin-bottom: 1.5rem;
 }
 
-.hero-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  display: inline-block;
-}
-
-
-/* Projects & Blog Grid */
+/* Grid for cards */
 .projects-grid {
   display: grid;
   gap: 1.5rem;
@@ -133,12 +135,8 @@ body.dark-mode footer {
 
 /* Unified Card Pattern */
 .card {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  height: 250px;
-  background-size: cover;
-  background-position: center;
+  position: relative; border-radius: 10px; overflow: hidden;
+  height: 250px; background-size: cover; background-position: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -147,23 +145,14 @@ body.dark-mode footer {
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 .card .overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0,0,0,0);
-  transition: background-color 0.3s ease;
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  background-color: rgba(0,0,0,0); transition: background-color 0.3s ease;
 }
 .card .overlay a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; height: 100%;
-  color: transparent;
-  font-size: 1.2rem;
-  padding: 0 1rem;
-  text-align: center;
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%; color: transparent;
+  font-size: 1.2rem; padding: 0 1rem; text-align: center;
   transition: color 0.3s ease;
 }
 .card:hover .overlay {
@@ -173,48 +162,30 @@ body.dark-mode footer {
   color: #ffb6c1;
 }
 
-/* Multi-Section Card */
+/* Multi-Section Card (horizontal slices) */
 .card.multi .overlay {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(3,1fr);
 }
 .card.multi .overlay a.section:not(:last-child) {
   border-right: 1px solid rgba(255,255,255,0.5);
 }
-.card.multi .overlay a.section {
-  /* remove the previous bottom-border if any */
-  border-bottom: none;
-}
 
 /* Schedule Form */
 form {
-  max-width: 400px;
-  margin: 0 auto;
-  display: grid;
-  gap: 1rem;
-  background: white;
-  padding: 2rem;
-  border-radius: 12px;
+  max-width: 400px; margin: 0 auto;
+  display: grid; gap: 1rem;
+  background: white; padding: 2rem; border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
-form label {
-  font-weight: bold;
-}
-form input,
-form textarea,
-form button {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+form label { font-weight: bold; }
+form input, form textarea, form button {
+  width: 100%; padding: 0.5rem;
+  border: 1px solid #ccc; border-radius: 8px;
   font-family: inherit;
 }
 form button {
-  border: none;
-  background: #d63384;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
+  border: none; background: #d63384; color: white;
+  cursor: pointer; transition: transform 0.3s, background 0.3s;
 }
 form button:hover {
   transform: scale(1.05);
@@ -223,47 +194,26 @@ form button:hover {
 
 /* Footer */
 footer {
-  text-align: center;
-  padding: 2rem;
-  background: linear-gradient(45deg, #ffe6f0, #fff7fb);
+  text-align: center; padding: 2rem;
+  background: linear-gradient(45deg,#ffe6f0,#fff7fb);
 }
-
-/* Space out each paragraph */
-footer p {
-  margin: 0.5rem 0;
-}
-
-/* Footer links (LinkedIn & Back-to-Home) */
+footer p { margin: 0.5rem 0; }
 footer p a,
 footer .back-to-home {
-  color: #c2186a;
-  font-weight: 600;
-  text-decoration: none;
+  color: #c2186a; font-weight: 600;
   transition: color 0.3s;
 }
-
 footer p a:hover,
 footer .back-to-home:hover {
   color: #a4166c;
 }
-
-/* If you want a bit of extra top margin on the “Back to Home” link: */
 footer .back-to-home {
-  display: inline-block;
-  margin-top: 0.5rem;
+  display: inline-block; margin-top: 0.5rem;
 }
 
-
 /* Responsive */
-@media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-  }
-  .navbar-links.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: flex;
-  }
+@media(max-width:768px){
+  .navbar-links { display: none; flex-direction: column; }
+  .navbar-links.active { display: flex; }
+  .menu-toggle { display: flex; }
 }
