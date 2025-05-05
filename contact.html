@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Keira Lowden – Schedule</title>
+  <title>Keira Lowden – Contact Me</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="icon" href="favicon.png" type="image/png"/>
 </head>
 <body>
+  <!-- Navigation -->
   <nav class="navbar">
     <div class="navbar-brand">Keira Lowden</div>
     <div class="menu-toggle" id="mobile-menu">
@@ -18,30 +19,31 @@
       <li><a href="bio.html" class="nav-link">Bio</a></li>
       <li><a href="projects.html" class="nav-link">Projects</a></li>
       <li><a href="blog.html" class="nav-link">Blog</a></li>
-      <li><a href="schedule.html" class="nav-link active">Schedule</a></li>
+      <li><a href="schedule.html" class="nav-link active">Contact</a></li>
       <li><button id="dark-mode-toggle">Dark Mode</button></li>
     </ul>
   </nav>
 
-  <main class="section">
-    <h2>Schedule a Meeting</h2>
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required/>
+  <!-- Contact Section -->
+  <main class="section contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-card">
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <label for="name">Keira Lowden</label>
+        <input type="text" id="name" name="name" placeholder="Jane Doe" required/>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required/>
+        <label for="email">KeiraLowden@gmail.com</label>
+        <input type="email" id="email" name="email" placeholder="jane@example.com" required/>
 
-      <label for="date">Preferred Date</label>
-      <input type="date" id="date" name="date" required/>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Say hello…" required></textarea>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>Keira Lowden | <a href="https://www.linkedin.com/in/keira-lowden/">LinkedIn</a></p>
     <p><a href="index.html" class="back-to-home">Back to Home</a></p>
