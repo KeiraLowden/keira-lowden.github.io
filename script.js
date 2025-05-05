@@ -37,3 +37,16 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('section').forEach(section => {
   observer.observe(section);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenu = document.getElementById('mobile-menu');
+  const navLinks   = document.querySelector('.navbar-links');
+
+  mobileMenu.addEventListener('click', () => {
+    // Toggle the visibility of the links
+    navLinks.classList.toggle('active');
+    // (Optional) give the menu icon an “open” class so you can animate it
+    mobileMenu.classList.toggle('open');
+  });
+});
+
