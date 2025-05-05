@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Keira Lowden – Bio</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="icon" href="favicon.png" type="image/png"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Keira Lowden – About Me</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
 </head>
 <body>
   <nav class="navbar">
@@ -15,24 +15,113 @@
     </div>
     <ul class="navbar-links">
       <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="bio.html" class="nav-link active">Bio</a></li>
+      <li><a href="bio.html" class="nav-link active">About</a></li>
       <li><a href="projects.html" class="nav-link">Projects</a></li>
       <li><a href="blog.html" class="nav-link">Blog</a></li>
-      <li><a href="contact" class="nav-link">Schedule</a></li>
+      <li><a href="schedule.html" class="nav-link">Contact</a></li>
       <li><button id="dark-mode-toggle">Dark Mode</button></li>
     </ul>
   </nav>
-  
+
   <main class="section">
     <h2>About Me</h2>
-    <p>I'm Keira Lowden — a Computer Science and Psychology major at Northeastern University (Minor in Economics). I blend technology, media, and community to create meaningful experiences. I've interned with BLACKBIRD.AI and HUMAN Security and served as a Teaching Assistant in Cybersecurity and CS Fundamentals.</p>
-    <p>Outside of tech, I co-founded the K-pop club Seoul Source, perform as a flutist, and proudly earned Eagle Scout honors.</p>
-    <ul class="bio-list">
-      <li><strong>Education:</strong> B.S. in Computer Science &amp; Psychology, Minor in Economics (Northeastern, 2027)</li>
-      <li><strong>Experience:</strong> BLACKBIRD.AI (AI Threat Intelligence), HUMAN Security (IT/Marketing), TA roles</li>
-      <li><strong>Activities:</strong> Seoul Source, NJ Youth Symphony, Scouts BSA (Eagle Scout)</li>
-      <li><strong>Skills:</strong> HTML, CSS, JavaScript, Python, Java, Kotlin, Figma, HubSpot</li>
-    </ul>
+    <p style="max-width:700px; margin:0 auto 3rem; line-height:1.6;">
+      I’m <strong>Keira Lowden</strong> — a dual Computer Science &amp; Psychology
+      major at Northeastern with a minor in Economics. I blend technical rigor
+      (linear & polynomial regression, clustering) with human factors to uncover
+      insights in AI, cybersecurity, and media. Eagle Scout, K-pop club co-founder,
+      flutist, and lifelong learner.
+    </p>
+
+    <!-- ——— Timeline ——— -->
+    <div class="bio-timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>AI Threat Intelligence Intern @ BLACKBIRD.AI</h3>
+          <span class="date">May–Aug 2024, New York City</span>
+          <p>Researched deepfakes & narrative attacks for NATO clients, authored featured K-pop analysis.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>IT & Marketing Intern @ HUMAN Security</h3>
+          <span class="date">Jul–Aug 2022, New York City</span>
+          <p>Centralized Slack database, improved workflows 15%, supported hybrid events & onboarding.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Teaching Assistant • Cybersecurity & CS Fundamentals</h3>
+          <span class="date">Spring & Fall 2024, Boston</span>
+          <p>Led labs on networks, forensics & code reviews; promoted accessibility & student-centered learning.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <h3>Eagle Scout & Digital Archivist</h3>
+          <span class="date">2019–2022, Short Hills, NJ</span>
+          <p>First female Eagle Scout in Troop 19; archived NJ Youth Symphony’s 40-year history.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ——— Cards ——— -->
+    <div class="bio-cards">
+
+      <div class="bio-card">
+        <h4>Education</h4>
+        <ul>
+          <li>B.S. Computer Science & Psychology (Northeastern ’27)</li>
+          <li>Minor in Economics</li>
+        </ul>
+      </div>
+
+      <div class="bio-card">
+        <h4>Skills & Tools</h4>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Python, Java, Kotlin</li>
+          <li>Figma, HubSpot</li>
+        </ul>
+      </div>
+
+      <div class="bio-card">
+        <h4>Certifications</h4>
+        <ul>
+          <li>IBM “What is Data Science” (2024)</li>
+          <li>Coursera “AI For Everyone” (2023)</li>
+          <li>Girls Who Code: Web Design in Python (2022)</li>
+        </ul>
+      </div>
+
+      <div class="bio-card">
+        <h4>Languages & Activities</h4>
+        <ul>
+          <li>Spanish (fluent), Korean (beginner)</li>
+          <li>Co-Founder, Seoul Source K-pop Club</li>
+          <li>Flutist, NJ Youth Symphony & Marching Band Drum Major</li>
+        </ul>
+      </div>
+
+      <div class="bio-card">
+        <h4>Distinctions</h4>
+        <ul>
+          <li>Eagle Scout, Inaugural Female Class</li>
+          <li>Featured Blackbird.AI Blog Author</li>
+        </ul>
+      </div>
+
+    </div>
+
   </main>
 
   <footer>
