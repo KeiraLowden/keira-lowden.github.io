@@ -25,6 +25,14 @@ main.section {
   padding: 2rem;
 }
 
+/* ──────────────────────────────────────────────────────────
+   SECTION TITLES
+   ────────────────────────────────────────────────────────── */
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;    /* extra space below each section heading */
+}
+
 /* LINKS DEFAULT */
 a {
   text-decoration: none;
@@ -226,7 +234,7 @@ body.dark-mode .cta-button:hover {
    PROJECTS GRID
    ────────────────────────────────────────────────────────── */
 .projects-grid {
-  margin: 0 auto;
+  margin: 1.5rem auto 0;  /* added top margin so grid sits below heading */
   max-width: 1200px;
   display: grid;
   gap: 1.5rem;
@@ -301,46 +309,6 @@ body.dark-mode .contact-section {
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   transition: background 0.3s, box-shadow 0.3s;
 }
-body.dark-mode .form-card {
-  background: #1e1e1e;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-}
-.form-card label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-.form-card input,
-.form-card textarea {
-  width: 100%;
-  padding: 0.75rem;
-  margin-bottom: 1.5rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background: #fafafa;
-  transition: background 0.3s, border-color 0.3s;
-}
-body.dark-mode .form-card input,
-body.dark-mode .form-card textarea {
-  background: #2e2e2e;
-  border-color: #444;
-  color: #eee;
-}
-.form-card button {
-  width: 100%;
-  padding: 0.75rem;
-  background: #d63384;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.form-card button:hover {
-  background: #ff4081;
-}
 
 /* ──────────────────────────────────────────────────────────
    BIO TIMELINE & CARDS
@@ -348,7 +316,7 @@ body.dark-mode .form-card textarea {
 .bio-timeline {
   position: relative;
   max-width: 800px;
-  margin: 0 auto 4rem;
+  margin: 1.5rem auto 4rem;  /* added top margin and bottom spacing */
   padding-left: 2rem;
 }
 .bio-timeline::before {
@@ -382,12 +350,13 @@ body.dark-mode .form-card textarea {
   transition: color 0.3s;
 }
 .timeline-content p { margin: 0.5rem 0 0; }
+
 .bio-cards {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   max-width: 1000px;
-  margin: 0 auto 4rem;
+  margin: 1.5rem auto 4rem;  /* added top margin and bottom spacing */
 }
 .bio-card {
   background: #fff;
