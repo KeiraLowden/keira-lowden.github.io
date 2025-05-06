@@ -2,9 +2,11 @@
    styles.css
    ────────────────────────────────────────────────────────── */
 
-/* 1) Reset & global */
+/* 1) RESET & GLOBAL */
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 html {
   scroll-behavior: smooth;
@@ -13,18 +15,17 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  margin: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
   background-color: #fff7fb;
   color: #333;
   transition: background-color 0.3s, color 0.3s;
 }
 main.section {
-  flex: 1;          /* push footer down */
-  padding: 2rem;    /* consistent padding */
+  flex: 1;            /* push footer down */
+  padding: 2rem;      /* prevent edge-hugging */
 }
 
-/* Fade-in for sections */
+/* FADE-IN ANIMATION */
 .hidden-section {
   opacity: 0;
   transform: translateY(50px);
@@ -35,14 +36,14 @@ main.section {
   transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Links default */
+/* LINKS DEFAULT */
 a {
   text-decoration: none;
   color: inherit;
 }
 
 /* ──────────────────────────────────────────────────────────
-   Dark Mode Base
+   DARK MODE BASE
    ────────────────────────────────────────────────────────── */
 body.dark-mode {
   background-color: #121212;
@@ -53,7 +54,7 @@ body.dark-mode a {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Navbar
+   NAVBAR
    ────────────────────────────────────────────────────────── */
 .navbar {
   display: flex;
@@ -74,8 +75,6 @@ body.dark-mode a {
   display: flex;
   gap: 1.5rem;
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 .navbar-links a {
   padding: 0.25rem 0.5rem;
@@ -89,13 +88,12 @@ body.dark-mode a {
   background: rgba(194,24,106,0.1);
   color: #a4166c;
 }
-/* Dark-mode navbar */
 body.dark-mode .navbar {
   background: #333;
 }
 
 /* ──────────────────────────────────────────────────────────
-   Dark-Mode Toggle Button
+   DARK-MODE TOGGLE BUTTON
    ────────────────────────────────────────────────────────── */
 #dark-mode-toggle {
   border: none;
@@ -111,7 +109,7 @@ body.dark-mode .navbar {
   background: linear-gradient(45deg,#ff3366,#ff66a3);
 }
 
-/* Mobile hamburger bars */
+/* HAMBURGER (MOBILE) */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -126,7 +124,7 @@ body.dark-mode .navbar {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Section Titles
+   SECTION TITLES
    ────────────────────────────────────────────────────────── */
 .section h2 {
   text-align: center;
@@ -134,14 +132,14 @@ body.dark-mode .navbar {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Hero (Home)
+   HERO (HOME)
    ────────────────────────────────────────────────────────── */
 .hero {
   flex: 1;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   text-align: center;
   background: #fafafa;
   padding: 3rem 1rem;
@@ -163,7 +161,7 @@ body.dark-mode .navbar {
   display: inline-block;
   margin-top: 1rem;
   background: #d63384;
-  color: #222;
+  color: #222;              /* darker text for contrast */
   padding: 0.75rem 1.5rem;
   border-radius: 20px;
   font-weight: 600;
@@ -173,7 +171,7 @@ body.dark-mode .navbar {
   background: linear-gradient(45deg,#ff3366,#ff66a3);
   transform: scale(1.05);
 }
-/* Dark-mode Hero */
+/* Hero dark override */
 body.dark-mode .hero {
   background: #1e1e1e;
 }
@@ -183,7 +181,7 @@ body.dark-mode .hero p {
 }
 body.dark-mode .cta-button {
   background: #ff66a3;
-  color: #fff;            /* stronger contrast */
+  color: #fff;
 }
 body.dark-mode .cta-button:hover {
   background: linear-gradient(45deg,#ff3366,#ff66a3);
@@ -191,7 +189,7 @@ body.dark-mode .cta-button:hover {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Projects & Blogs grid
+   PROJECTS & BLOGS GRID
    ────────────────────────────────────────────────────────── */
 .projects-grid {
   margin: 0 auto;
@@ -201,9 +199,11 @@ body.dark-mode .cta-button:hover {
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 }
 
+/* CARD PATTERN */
 .card {
-  width: 100%;               /* fill the grid column */
-  height: 250px;             /* same height as your blog posts */
+  position: relative;
+  width: 100%;
+  height: 250px;            /* uniform rectangle height */
   border-radius: 10px;
   overflow: hidden;
   background-size: cover;
@@ -211,8 +211,6 @@ body.dark-mode .cta-button:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
-
-/* hover states */
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
@@ -230,14 +228,16 @@ body.dark-mode .cta-button:hover {
 }
 .card .overlay a {
   color: transparent;
-  transition: color 0.3s;
-  text-align: center;
   padding: 0 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 .card:hover .overlay a {
   color: #ffb6c1;
 }
 
+/* MULTI-SECTION CARD */
 .card.multi .overlay {
   display: grid;
   grid-template-columns: repeat(3,1fr);
@@ -247,7 +247,7 @@ body.dark-mode .cta-button:hover {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Contact Section
+   CONTACT SECTION
    ────────────────────────────────────────────────────────── */
 .contact-section {
   background: #fafafa;
@@ -309,7 +309,7 @@ body.dark-mode .form-card textarea {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Bio Timeline & Cards
+   BIO TIMELINE & CARDS
    ────────────────────────────────────────────────────────── */
 .bio-timeline {
   position: relative;
@@ -341,17 +341,13 @@ body.dark-mode .form-card textarea {
 .timeline-content {
   padding-left: 2.5rem;
 }
-.timeline-content h3 {
-  margin: 0 0 0.25rem;
-}
+.timeline-content h3 { margin: 0 0 0.25rem; }
 .timeline-content .date {
   font-size: 0.9rem;
   color: #666;
   transition: color 0.3s;
 }
-.timeline-content p {
-  margin: 0.5rem 0 0;
-}
+.timeline-content p { margin: 0.5rem 0 0; }
 .bio-cards {
   display: grid;
   gap: 1.5rem;
@@ -376,14 +372,12 @@ body.dark-mode .form-card textarea {
 }
 .bio-card ul {
   list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
+  margin-top: 0.5rem;
 }
 .bio-card ul li {
   margin: 0.3rem 0;
   color: #333;
 }
-/* Dark-mode timeline & cards */
 body.dark-mode .bio-timeline::before {
   background: linear-gradient(to bottom,#ff66a3,#d63384);
 }
@@ -402,7 +396,7 @@ body.dark-mode .bio-card ul li {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Footer + dark-mode override
+   FOOTER + DARK MODE OVERRIDE
    ────────────────────────────────────────────────────────── */
 footer {
   margin-top: auto;
@@ -410,9 +404,7 @@ footer {
   padding: 2rem;
   background: linear-gradient(45deg,#ffe6f0,#fff7fb);
 }
-footer p {
-  margin: 0.5rem 0;
-}
+footer p { margin: 0.5rem 0; }
 footer a,
 footer .back-to-home {
   color: #c2186a;
@@ -433,17 +425,10 @@ body.dark-mode footer .back-to-home {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Responsive
+   RESPONSIVE
    ────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .navbar-links {
-    display: none;
-    flex-direction: column;
-  }
-  .navbar-links.active {
-    display: flex;
-  }
-  .menu-toggle {
-    display: flex;
-  }
+  .navbar-links { display: none; flex-direction: column; }
+  .navbar-links.active { display: flex; }
+  .menu-toggle { display: flex; }
 }
