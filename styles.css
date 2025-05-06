@@ -230,7 +230,7 @@ body.dark-mode .cta-button:hover {
   color: transparent;
   padding: 0 1rem;
   text-align: center;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   transition: color 0.3s;
 }
 .card:hover .overlay a {
