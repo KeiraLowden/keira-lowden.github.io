@@ -194,40 +194,37 @@ body.dark-mode .cta-button:hover {
    Projects & Blogs grid
    ────────────────────────────────────────────────────────── */
 .projects-grid {
-  display: grid;
-  gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin: 0 auto;
   max-width: 1200px;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
 }
 
-/* Card pattern */
 .card {
-  width: 100%;
-  aspect-ratio: 16 / 9;      /* ← change this line for different rectangle shapes */
+  width: 100%;               /* fill the grid column */
+  height: 250px;             /* same height as your blog posts */
   border-radius: 10px;
   overflow: hidden;
-  background-size: cover;    /* keeps your BG images scaling */
+  background-size: cover;
   background-position: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+/* hover states */
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
-
 .card .overlay {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(0,0,0,0);
   transition: background 0.3s;
 }
-
 .card:hover .overlay {
   background: rgba(0,0,0,0.6);
 }
@@ -236,12 +233,10 @@ body.dark-mode .cta-button:hover {
   transition: color 0.3s;
   text-align: center;
   padding: 0 1rem;
-  font-size: 1.2rem;
 }
 .card:hover .overlay a {
   color: #ffb6c1;
-}
-/* Multi-section card */
+}/* Multi-section card */
 .card.multi .overlay {
   display: grid;
   grid-template-columns: repeat(3,1fr);
