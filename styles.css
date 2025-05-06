@@ -30,7 +30,7 @@ main.section {
    ────────────────────────────────────────────────────────── */
 .section h2 {
   text-align: center;
-  margin-bottom: 2rem;    /* extra space below each section heading */
+  margin-bottom: 2rem;
 }
 
 /* LINKS DEFAULT */
@@ -130,7 +130,9 @@ body.dark-mode .navbar {
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* CTA BUTTON */
+/* ──────────────────────────────────────────────────────────
+   CTA BUTTON
+   ────────────────────────────────────────────────────────── */
 .cta-button {
   display: inline-block;
   margin-top: 1rem;
@@ -161,6 +163,24 @@ body.dark-mode .cta-button {
 body.dark-mode .cta-button:hover {
   background: linear-gradient(45deg,#ff3366,#ff66a3);
   color: #fff;
+}
+
+/* ──────────────────────────────────────────────────────────
+   DARK MODE TOGGLE (styled like .cta-button)
+   ────────────────────────────────────────────────────────── */
+#dark-mode-toggle {
+  background: #d63384;
+  color: #222;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+#dark-mode-toggle:hover {
+  background: linear-gradient(45deg,#ff3366,#ff66a3);
+  transform: scale(1.05);
 }
 
 /* ──────────────────────────────────────────────────────────
@@ -234,7 +254,7 @@ body.dark-mode .cta-button:hover {
    PROJECTS GRID
    ────────────────────────────────────────────────────────── */
 .projects-grid {
-  margin: 1.5rem auto 0;  /* added top margin so grid sits below heading */
+  margin: 1.5rem auto 0;
   max-width: 1200px;
   display: grid;
   gap: 1.5rem;
@@ -258,7 +278,8 @@ body.dark-mode .cta-button:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 .card .overlay {
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,13 +337,15 @@ body.dark-mode .contact-section {
 .bio-timeline {
   position: relative;
   max-width: 800px;
-  margin: 1.5rem auto 4rem;  /* added top margin and bottom spacing */
+  margin: 1.5rem auto 4rem;
   padding-left: 2rem;
 }
 .bio-timeline::before {
   content: '';
   position: absolute;
-  top: 0; bottom: 0; left: 1rem;
+  top: 0;
+  bottom: 0;
+  left: 1rem;
   width: 4px;
   background: linear-gradient(to bottom,#d63384,#ff66a3);
   transition: background 0.3s;
@@ -333,8 +356,10 @@ body.dark-mode .contact-section {
   margin-bottom: 3rem;
 }
 .timeline-marker {
-  position: absolute; left: 0;
-  width: 20px; height: 20px;
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: #fff;
   border: 4px solid #d63384;
@@ -343,20 +368,24 @@ body.dark-mode .contact-section {
 .timeline-content {
   padding-left: 2.5rem;
 }
-.timeline-content h3 { margin: 0 0 0.25rem; }
+.timeline-content h3 {
+  margin: 0 0 0.25rem;
+}
 .timeline-content .date {
   font-size: 0.9rem;
   color: #666;
   transition: color 0.3s;
 }
-.timeline-content p { margin: 0.5rem 0 0; }
+.timeline-content p {
+  margin: 0.5rem 0 0;
+}
 
 .bio-cards {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
   max-width: 1000px;
-  margin: 1.5rem auto 4rem;  /* added top margin and bottom spacing */
+  margin: 1.5rem auto 4rem;
 }
 .bio-card {
   background: #fff;
@@ -407,7 +436,9 @@ footer {
   padding: 2rem;
   background: linear-gradient(45deg,#ffe6f0,#fff7fb);
 }
-footer p { margin: 0.5rem 0; }
+footer p {
+  margin: 0.5rem 0;
+}
 footer a,
 footer .back-to-home {
   color: #c2186a;
@@ -431,7 +462,14 @@ body.dark-mode footer .back-to-home {
    RESPONSIVE
    ────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  .navbar-links { display: none; flex-direction: column; }
-  .navbar-links.active { display: flex; }
-  .menu-toggle { display: flex; }
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .menu-toggle {
+    display: flex;
+  }
 }
