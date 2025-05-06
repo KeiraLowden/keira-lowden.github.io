@@ -455,6 +455,74 @@ body.dark-mode footer a,
 body.dark-mode footer .back-to-home {
   color: #ff4081 !important;
 }
+/* ──────────────────────────────────────────────────────────
+   CONTACT FORM LAYOUT & BUTTON STYLING
+   ────────────────────────────────────────────────────────── */
+.contact-section {
+  /* ensure it still has the fade-on-scroll class */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 700px;
+  margin: 1rem auto 0;
+  padding: 2rem;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* make the form fields stack vertically */
+.form-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* full-width inputs & textarea */
+.form-card label {
+  font-weight: 600;
+}
+.form-card input,
+.form-card textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: background 0.3s, border-color 0.3s;
+}
+body.dark-mode .form-card input,
+body.dark-mode .form-card textarea {
+  background: #2e2e2e;
+  border-color: #444;
+  color: #eee;
+}
+
+/* style your submit exactly like a CTA */
+.form-card button[type="submit"] {
+  align-self: flex-start;    /* button hugs the left edge */
+  background: #d63384;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.form-card button[type="submit"]:hover {
+  background: linear-gradient(45deg,#ff3366,#ff66a3);
+  transform: scale(1.05);
+}
+body.dark-mode .form-card button[type="submit"] {
+  background: #ff66a3;
+}
+
 
 /* ──────────────────────────────────────────────────────────
    RESPONSIVE
