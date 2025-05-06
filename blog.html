@@ -24,42 +24,88 @@
     </ul>
   </nav>
 
-  <main class="section">
+  <!-- Blog Section with fade-on-scroll -->
+  <main class="section fade-on-scroll">
     <h2>My Blog</h2>
     <div class="projects-grid">
       <div class="card" style="background-image:url('KPOP.png');">
         <div class="overlay">
-          <a href="https://blackbird.ai/blog/kpop-and-precision-canceling-how-narrative-attacks-shape-fan-perception/" target="_blank"><h3>K-pop & Precision Canceling: Narrative Attacks & Fan Perception</h3></a>
+          <a href="https://blackbird.ai/blog/kpop-and-precision-canceling-how-narrative-attacks-shape-fan-perception/" target="_blank">
+            <h3>K-pop & Precision Canceling: Narrative Attacks & Fan Perception</h3>
+          </a>
         </div>
       </div>
       <div class="card" style="background-image:url('MICRO.png');">
         <div class="overlay">
-          <a href="https://blackbird.ai/blog/microsoft-unveils-ai-cybersecurity-strategies-at-black-hat-2024/" target="_blank"><h3>Microsoft’s AI Cybersecurity at Black Hat 2024</h3></a>
+          <a href="https://blackbird.ai/blog/microsoft-unveils-ai-cybersecurity-strategies-at-black-hat-2024/" target="_blank">
+            <h3>Microsoft’s AI Cybersecurity at Black Hat 2024</h3>
+          </a>
         </div>
       </div>
       <div class="card" style="background-image:url('UK.png');">
         <div class="overlay">
-          <a href="https://blackbird.ai/blog/deepfakes-disinformation-bots-uk-general-election/" target="_blank"><h3>Deepfakes, Disinformation & Bot Networks in the UK Election</h3></a>
+          <a href="https://blackbird.ai/blog/deepfakes-disinformation-bots-uk-general-election/" target="_blank">
+            <h3>Deepfakes, Disinformation & Bot Networks in the UK Election</h3>
+          </a>
         </div>
       </div>
       <div class="card" style="background-image:url('GENZ.png');">
         <div class="overlay">
-          <a href="https://blackbird.ai/blog/gen-z-compass-blackbird-ai-battles-misinformation-and-disinformation/" target="_blank"><h3>Empowering Gen Z: Compass by Blackbird.AI vs. Misinformation</h3></a>
+          <a href="https://blackbird.ai/blog/gen-z-compass-blackbird-ai-battles-misinformation-and-disinformation/" target="_blank">
+            <h3>Empowering Gen Z: Compass by Blackbird.AI vs. Misinformation</h3>
+          </a>
         </div>
       </div>
       <div class="card" style="background-image:url('AMA.png');">
         <div class="overlay">
-          <a href="https://blackbird.ai/blog/ai-american-marketing-association-hall-of-fame-panel/" target="_blank"><h3>Key Takeaways from the AMA AI Panel</h3></a>
+          <a href="https://blackbird.ai/blog/ai-american-marketing-association-hall-of-fame-panel/" target="_blank">
+            <h3>Key Takeaways from the AMA AI Panel</h3>
+          </a>
         </div>
       </div>
     </div>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>Keira Lowden | <a href="https://www.linkedin.com/in/keira-lowden/" target="_blank">LinkedIn</a></p>
+    <p>
+      Keira Lowden |
+      <a href="https://www.linkedin.com/in/keira-lowden/" target="_blank">LinkedIn</a>
+    </p>
     <p><a href="index.html" class="back-to-home">Back to Home</a></p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Inline Scripts -->
+  <script>
+    // Dark mode toggle
+    document
+      .getElementById('dark-mode-toggle')
+      .addEventListener('click', () =>
+        document.body.classList.toggle('dark-mode')
+      );
+
+    // Mobile menu toggle
+    document
+      .getElementById('mobile-menu')
+      .addEventListener('click', () =>
+        document.querySelector('.navbar-links').classList.toggle('active')
+      );
+
+    // Scroll-triggered fade-in
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+    document
+      .querySelectorAll('.fade-on-scroll')
+      .forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
