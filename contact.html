@@ -2,73 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Keira Lowden – Contact Me</title>
   <link rel="stylesheet" href="styles.css"/>
   <link rel="icon" href="favicon.png" type="image/png"/>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="navbar-brand">Keira Lowden</div>
-    <div class="menu-toggle" id="mobile-menu">
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </div>
-    <ul class="navbar-links">
-      <li><a href="index.html" class="nav-link">Home</a></li>
-      <li><a href="bio.html" class="nav-link">Bio</a></li>
-      <li><a href="projects.html" class="nav-link">Projects</a></li>
-      <li><a href="blog.html" class="nav-link">Blog</a></li>
-      <!-- “Schedule” renamed to Contact -->
-      <li><a href="contact.html" class="nav-link active">Contact</a></li>
-      <li><button id="dark-mode-toggle">Dark Mode</button></li>
-    </ul>
-  </nav>
+  <nav class="navbar">…</nav>
 
-  <!-- Contact Section -->
   <main class="section contact-section">
     <h2>Contact Me</h2>
     <div class="form-card">
-      <!-- replace action URL with your Formspree (or other) endpoint -->
       <form action="https://formspree.io/f/your-form-id" method="POST">
         <label for="name">Name</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Jane Doe"
-          required
-        />
-
+        <input id="name" name="name" placeholder="Jane Doe" required/>
         <label for="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="jane@example.com"
-          required
-        />
-
+        <input id="email" type="email" name="email" placeholder="you@example.com" required/>
         <label for="message">Message</label>
-        <textarea
-          id="message"
-          name="message"
-          placeholder="Say hello…"
-          rows="6"
-          required
-        ></textarea>
-
+        <textarea id="message" name="message" placeholder="Say hello…" rows="6" required></textarea>
         <button type="submit">Send Message</button>
       </form>
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>Keira Lowden | <a href="https://www.linkedin.com/in/keira-lowden/">LinkedIn</a></p>
-    <p><a href="index.html" class="back-to-home">Back to Home</a></p>
-  </footer>
-
+  <footer>…</footer>
   <script src="script.js"></script>
 </body>
 </html>
