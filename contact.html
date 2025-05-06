@@ -26,19 +26,43 @@
 
   <!-- Contact Form -->
   <main class="section contact-section">
-    <h2>Contact Me</h2>
-    <div class="form-card">
-      <form action="https://formspree.io/f/xpwddnwj" method="POST">
-        <label for="name">Name</label>
-        <input id="name" name="name" type="text" placeholder="Jane Doe" required/>
+  <h2>Contact Me</h2>
+  <div class="form-card">
+    <form
+      action="https://formspree.io/f/xpwddnwj"
+      method="POST"
+    >
+      <!-- optional spam honeypot -->
+      <input type="text" name="_gotcha" style="display:none" />
 
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="jane@example.com" required/>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" placeholder="Say hello…" required></textarea>
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="_replyto"
+        placeholder="you@example.com"
+        required
+      />
 
-        <button type="submit">Send Message</button>
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="6"
+        placeholder="What’s on your mind?"
+        required
+      ></textarea>
+
+      <button type="submit">Send Message</button>
       </form>
     </div>
   </main>
