@@ -194,49 +194,49 @@ body.dark-mode .cta-button:hover {
    Projects & Blogs grid
    ────────────────────────────────────────────────────────── */
 .projects-grid {
-  margin: 0 auto;
-  max-width: 1200px;
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 /* Card pattern */
 .card {
-  position: relative;
-  height: 250px;
+  width: 100%;
+  aspect-ratio: 16 / 9;      /* ← change this line for different rectangle shapes */
   border-radius: 10px;
   overflow: hidden;
-  background-size: cover;
+  background-size: cover;    /* keeps your BG images scaling */
   background-position: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.3s, box-shadow 0.3s;
 }
+
 .card:hover {
   transform: scale(1.03);
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
+
 .card .overlay {
-  position: absolute; inset: 0;
+  position: absolute;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background: rgba(0,0,0,0);
   transition: background 0.3s;
 }
-.card .overlay a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%; height: 100%;
-  color: transparent;
-  padding: 0 1rem;
-  text-align: center;
-  font-size: 1.2rem;
-  transition: color 0.3s;
-}
+
 .card:hover .overlay {
   background: rgba(0,0,0,0.6);
+}
+.card .overlay a {
+  color: transparent;
+  transition: color 0.3s;
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 1.2rem;
 }
 .card:hover .overlay a {
   color: #ffb6c1;
