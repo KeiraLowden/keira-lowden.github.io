@@ -224,13 +224,13 @@ body.dark-mode .cta-button:hover {
   transition: background 0.3s;
 }
 .card:hover .overlay {
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.8);
 }
 .card .overlay a {
   color: transparent;
   padding: 0 1rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: color 0.3s;
 }
 .card:hover .overlay a {
