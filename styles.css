@@ -2,7 +2,7 @@
    styles.css
    ────────────────────────────────────────────────────────── */
 
-/* 1) Flex layout + global resets */
+/* 1) Reset & global */
 * {
   box-sizing: border-box;
 }
@@ -89,7 +89,6 @@ body.dark-mode a {
   background: rgba(194,24,106,0.1);
   color: #a4166c;
 }
-
 /* Dark-mode navbar */
 body.dark-mode .navbar {
   background: #333;
@@ -127,7 +126,7 @@ body.dark-mode .navbar {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Section titles
+   Section Titles
    ────────────────────────────────────────────────────────── */
 .section h2 {
   text-align: center;
@@ -174,7 +173,6 @@ body.dark-mode .navbar {
   background: linear-gradient(45deg,#ff3366,#ff66a3);
   transform: scale(1.05);
 }
-
 /* Dark-mode Hero */
 body.dark-mode .hero {
   background: #1e1e1e;
@@ -185,10 +183,11 @@ body.dark-mode .hero p {
 }
 body.dark-mode .cta-button {
   background: #ff66a3;
-  color: #ddd; 
+  color: #fff;            /* stronger contrast */
 }
 body.dark-mode .cta-button:hover {
   background: linear-gradient(45deg,#ff3366,#ff66a3);
+  color: #fff;
 }
 
 /* ──────────────────────────────────────────────────────────
@@ -218,8 +217,7 @@ body.dark-mode .cta-button:hover {
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
 }
 .card .overlay {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -230,8 +228,7 @@ body.dark-mode .cta-button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+  width: 100%; height: 100%;
   color: transparent;
   padding: 0 1rem;
   text-align: center;
@@ -244,7 +241,6 @@ body.dark-mode .cta-button:hover {
 .card:hover .overlay a {
   color: #ffb6c1;
 }
-
 /* Multi-section card */
 .card.multi .overlay {
   display: grid;
@@ -317,18 +313,101 @@ body.dark-mode .form-card textarea {
 }
 
 /* ──────────────────────────────────────────────────────────
-   Dark-mode footer override
+   Bio Timeline & Cards
    ────────────────────────────────────────────────────────── */
-body.dark-mode footer {
-  background: linear-gradient(45deg,#333,#444) !important;
-  color: #eee !important;
+.bio-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto 4rem;
+  padding-left: 2rem;
 }
-body.dark-mode footer a,
-body.dark-mode footer .back-to-home {
-  color: #ff4081 !important;
+.bio-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0; left: 1rem;
+  width: 4px;
+  background: linear-gradient(to bottom,#d63384,#ff66a3);
+  transition: background 0.3s;
+}
+.timeline-item {
+  position: relative;
+  display: flex;
+  margin-bottom: 3rem;
+}
+.timeline-marker {
+  position: absolute; left: 0;
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #d63384;
+  top: 0.25rem;
+}
+.timeline-content {
+  padding-left: 2.5rem;
+}
+.timeline-content h3 {
+  margin: 0 0 0.25rem;
+}
+.timeline-content .date {
+  font-size: 0.9rem;
+  color: #666;
+  transition: color 0.3s;
+}
+.timeline-content p {
+  margin: 0.5rem 0 0;
+}
+.bio-cards {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  max-width: 1000px;
+  margin: 0 auto 4rem;
+}
+.bio-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.bio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.bio-card h4 {
+  margin-top: 0;
+  color: #c2186a;
+}
+.bio-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+.bio-card ul li {
+  margin: 0.3rem 0;
+  color: #333;
+}
+/* Dark-mode timeline & cards */
+body.dark-mode .bio-timeline::before {
+  background: linear-gradient(to bottom,#ff66a3,#d63384);
+}
+body.dark-mode .timeline-content .date {
+  color: #aaa;
+}
+body.dark-mode .bio-card {
+  background: #1e1e1e;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+body.dark-mode .bio-card h4 {
+  color: #ff66a3;
+}
+body.dark-mode .bio-card ul li {
+  color: #ddd;
 }
 
-/* Footer */
+/* ──────────────────────────────────────────────────────────
+   Footer + dark-mode override
+   ────────────────────────────────────────────────────────── */
 footer {
   margin-top: auto;
   text-align: center;
@@ -348,12 +427,18 @@ footer a:hover,
 footer .back-to-home:hover {
   color: #a4166c;
 }
+body.dark-mode footer {
+  background: linear-gradient(45deg,#333,#444) !important;
+  color: #eee !important;
+}
+body.dark-mode footer a,
+body.dark-mode footer .back-to-home {
+  color: #ff4081 !important;
+}
 
 /* ──────────────────────────────────────────────────────────
-   Bio timeline & cards (omitted here for brevity)
+   Responsive
    ────────────────────────────────────────────────────────── */
-
-/* Responsive */
 @media (max-width: 768px) {
   .navbar-links {
     display: none;
