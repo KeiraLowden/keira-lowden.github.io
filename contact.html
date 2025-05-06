@@ -8,24 +8,46 @@
   <link rel="icon" href="favicon.png" type="image/png"/>
 </head>
 <body>
-  <nav class="navbar">…</nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">Keira Lowden</div>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bio.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><button id="dark-mode-toggle">Dark Mode</button></li>
+    </ul>
+  </nav>
 
+  <!-- Contact Form -->
   <main class="section contact-section">
     <h2>Contact Me</h2>
     <div class="form-card">
       <form action="https://formspree.io/f/your-form-id" method="POST">
         <label for="name">Name</label>
-        <input id="name" name="name" placeholder="Jane Doe" required/>
+        <input id="name" name="name" type="text" placeholder="Jane Doe" required/>
+
         <label for="email">Email</label>
-        <input id="email" type="email" name="email" placeholder="you@example.com" required/>
+        <input id="email" name="email" type="email" placeholder="jane@example.com" required/>
+
         <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Say hello…" rows="6" required></textarea>
+        <textarea id="message" name="message" rows="6" placeholder="Say hello…" required></textarea>
+
         <button type="submit">Send Message</button>
       </form>
     </div>
   </main>
 
-  <footer>…</footer>
+  <footer>
+    <p>Keira Lowden | <a href="https://www.linkedin.com/in/keira-lowden/" target="_blank">LinkedIn</a></p>
+    <p><a href="index.html" class="back-to-home">Back to Home</a></p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
