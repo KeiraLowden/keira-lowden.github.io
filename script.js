@@ -1,7 +1,8 @@
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
   // Dark-mode toggle
   const toggle = document.getElementById('dark-mode-toggle');
-  const saved  = localStorage.getItem('darkMode');
+  const saved = localStorage.getItem('darkMode');
   if (saved === 'dark') {
     document.body.classList.add('dark-mode');
     toggle.textContent = 'Light Mode';
@@ -21,14 +22,12 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileMenu.classList.toggle('open');
   });
 
-  // Fade-in animation
+  // Fade-in on scroll
+  document.querySelectorAll('main.section').forEach(sec => sec.classList.add('hidden-section'));
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) e.target.classList.add('visible-section');
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible-section');
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('section, main').forEach(s => {
-    s.classList.add('hidden-section');
-    observer.observe(s);
-  });
+  document.querySelectorAll('main.section').forEach(sec => observer.observe(sec));
 });
