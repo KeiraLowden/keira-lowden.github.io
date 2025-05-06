@@ -38,3 +38,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.1 });
   document.querySelectorAll('section').forEach(sec => observer.observe(sec));
 });
+
