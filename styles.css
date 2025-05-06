@@ -203,7 +203,7 @@ body.dark-mode .cta-button:hover {
 .card {
   position: relative;
   width: 100%;
-  height: 350px;            /* uniform rectangle height */
+  aspect-ratio: 16/9;
   border-radius: 10px;
   overflow: hidden;
   background-size: cover;
