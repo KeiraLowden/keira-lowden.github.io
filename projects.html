@@ -8,25 +8,48 @@
   <link rel="icon" href="favicon.png" type="image/png"/>
 </head>
 <body>
-  <nav class="navbar">…</nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">Keira Lowden</div>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+    </div>
+    <ul class="navbar-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="bio.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><button id="dark-mode-toggle">Dark Mode</button></li>
+    </ul>
+  </nav>
 
   <main class="section">
     <h2>Projects</h2>
     <div class="projects-grid">
+      <!-- Multi-section DS project -->
       <div class="card multi" style="background-image:url('Abstract.png');">
-        <div class="card-inner">
-          <div class="overlay">
-            <a href="DS3000 Final Project Report.pdf" class="section section-1"><h3>Final Report</h3></a>
-            <a href="https://docs.google.com/presentation/…" class="section section-2"><h3>Slideshow</h3></a>
-            <a href="Final_Project_DS.ipynb" class="section section-3"><h3>Notebook</h3></a>
-          </div>
+        <div class="overlay">
+          <a href="DS3000 Final Project Report.pdf" class="section section-1"><h3>Final Report (PDF)</h3></a>
+          <a href="https://docs.google.com/presentation/18ftrdIwxgDNy4WFtForj7-tNHiZQMoNQCEcxEGgdB74/edit?usp=sharing" class="section section-2"><h3>Slideshow</h3></a>
+          <a href="Final_Project_DS.ipynb" class="section section-3"><h3>Notebook (IPYNB)</h3></a>
         </div>
       </div>
-      <!-- …more project cards… -->
+      <!-- Example additional project -->
+      <div class="card" style="background-image:url('Project2.png');">
+        <div class="overlay">
+          <a href="project-two.html"><h3>Project Two: Interactive Web App</h3></a>
+        </div>
+      </div>
+      <!-- Add more .card blocks here -->
     </div>
   </main>
 
-  <footer>…</footer>
+  <footer>
+    <p>Keira Lowden | <a href="https://www.linkedin.com/in/keira-lowden/" target="_blank">LinkedIn</a></p>
+    <p><a href="index.html" class="back-to-home">Back to Home</a></p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
