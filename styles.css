@@ -236,6 +236,10 @@ body.dark-mode .cta-button:hover {
 }
 .card:hover .overlay a {
   color: #ffb6c1;
+}
+
+
+
 }/* Multi-section card */
 .card.multi .overlay {
   display: grid;
